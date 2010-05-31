@@ -14,6 +14,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	remmina >= %{version}-%{release}
 BuildRequires:	gnome-panel-devel >= 2.20
 BuildRequires:	avahi-client-devel
+Buildrequires:	intltool >= 0.35.0
 
 %description
 Remmina is a remote desktop client written in GTK+, aiming to be
