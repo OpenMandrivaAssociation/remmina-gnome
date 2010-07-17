@@ -1,20 +1,17 @@
-%define name	remmina-gnome
-%define version	0.7.3
-%define release %mkrel 1
-
 Summary:	GNOME desktop applet for remmina
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Source0:	%{name}-%{version}.tar.gz
+Name:		remmina-gnome
+Version:	0.8.0
+Release:	%mkrel 1
 License:	GPLv2
 Group:		Graphical desktop/GNOME
 Url:		http://remmina.sourceforge.net/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Source0:	http://downloads.sourceforge.net/project/remmina/%{version}/%{name}-%{version}.tar.gz
 Requires:	remmina >= %{version}-%{release}
 BuildRequires:	gnome-panel-devel >= 2.20
 BuildRequires:	avahi-client-devel
 Buildrequires:	intltool >= 0.35.0
+BuildRequires:  perl(XML::Parser)
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Remmina is a remote desktop client written in GTK+, aiming to be
@@ -30,19 +27,19 @@ This package contains a GNOME desktop applet for remmina.
 %setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
 %__rm -rf %{buildroot}
-%makeinstall
+%makeinstall_std
 
 %clean
 %__rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS ChangeLog COPYING NEWS README
+%doc AUTHORS ChangeLog NEWS README
 %_bindir/remmina-applet
 %_libdir/bonobo/servers/Remmina_Applet.server
 %_datadir/locale/*/*/remmina-gnome.mo
