@@ -1,6 +1,6 @@
 Summary:	GNOME desktop applet for remmina
 Name:		remmina-gnome
-Version:	0.8.0
+Version:	0.8.1
 Release:	%mkrel 1
 License:	GPLv2
 Group:		Graphical desktop/GNOME
