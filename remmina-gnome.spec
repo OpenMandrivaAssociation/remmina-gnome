@@ -4,7 +4,7 @@ Version:	0.8.1
 Release:	%mkrel 1
 License:	GPLv2
 Group:		Graphical desktop/GNOME
-Url:		http://remmina.sourceforge.net/
+Url:		https://remmina.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/remmina/%{version}/%{name}-%{version}.tar.gz
 Requires:	remmina >= %{version}-%{release}
 BuildRequires:	gnome-panel-devel >= 2.20
